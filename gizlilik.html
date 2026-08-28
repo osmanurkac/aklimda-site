@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aklımda — Gizlilik Politikası</title>
+<style>
+  :root { --bg:#faf5ee; --fg:#241e19; --muted:#6b625a; --nar:#f2543d; --line:#e7ddce; --card:#fff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#191411; --fg:#f2e9dd; --muted:#a49a90; --line:#3a322b; --card:#241e19; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:0; background:var(--bg); color:var(--fg);
+         font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 22px 80px; }
+  h1 { font-size: 30px; line-height:1.2; margin: 0 0 6px; }
+  h2 { font-size: 20px; margin: 38px 0 10px; }
+  h3 { font-size: 16px; margin: 24px 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 32px; }
+  table { width:100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { text-align:left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 600; }
+  .card { background: var(--card); border:1px solid var(--line); border-radius: 14px; padding: 16px 18px; margin: 18px 0; }
+  a { color: var(--nar); }
+  code { background: var(--card); border:1px solid var(--line); border-radius:5px; padding:1px 5px; font-size:.9em; }
+  footer { margin-top: 48px; padding-top: 18px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Gizlilik Politikası</h1>
+<p class="sub">Aklımda · Son güncelleme: 29 Ağustos 2026</p>
+
+<p>Aklımda, Instagram ve TikTok'ta gördüğünüz mekanları kendi haritanıza kaydetmenizi
+sağlayan bir iPhone uygulamasıdır. Bu sayfa, uygulamanın hangi veriyi neden işlediğini
+sade bir dille anlatır. Kısa özet: <strong>kaydettiğiniz mekanlar sizin cihazınızda durur.</strong>
+Sunucuya giden şeyler aşağıda tek tek yazılıdır ve her birinin bir sebebi vardır.</p>
+
+<h2>Veri sorumlusu</h2>
+<p>Osman Tarık Urkaç · <a href="mailto:osmantarikurkac1@gmail.com">osmantarikurkac1@gmail.com</a></p>
+
+<h2>İşlenen veriler</h2>
+
+<table>
+<tr><th>Veri</th><th>Neden</th><th>Nerede durur</th></tr>
+
+<tr>
+  <td><strong>Kaydettiğiniz mekanlar</strong><br>ad, adres, koordinat, kategori, notunuz</td>
+  <td>Uygulamanın kendisi — haritanız ve listeniz.</td>
+  <td><strong>Cihazınızda.</strong> iCloud yedeğiniz açıksa Apple'ın yedeğine dahil olur. Bize gönderilmez.</td>
+</tr>
+
+<tr>
+  <td><strong>Konumunuz</strong></td>
+  <td>Haritada yakınınızdaki kayıtları göstermek, mesafe hesaplamak, "şu an açık" süzgeci ve
+      yakında bildirimi.</td>
+  <td>Cihazınızda hesaplanır. <strong>Tek istisna:</strong> mekan <em>ararken</em> yakındaki
+      sonuçları getirebilmek için yaklaşık konumunuz arama sunucumuza iletilir. Orada
+      <strong>saklanmaz</strong>, yalnız o aramayı yönlendirmek için kullanılır.</td>
+</tr>
+
+<tr>
+  <td><strong>Paylaştığınız gönderi bağlantısı ve metni</strong></td>
+  <td>Gönderideki mekanı bulmak. Metin bir yapay zekâ modeline (Anthropic Claude) gönderilir.</td>
+  <td>Sunucumuzdan geçer, <strong>saklanmaz</strong>. Profiliniz, takipçileriniz veya gönderi
+      geçmişiniz hiçbir zaman okunmaz.</td>
+</tr>
+
+<tr>
+  <td><strong>Anonim kullanıcı kimliği</strong><br>(Firebase Anonymous)</td>
+  <td>Ücretsiz katmandaki 10 mekanlık hakkın ve Premium kotalarının sayılması.</td>
+  <td>Sunucumuzda. Adınızla, e-postanızla veya telefonunuzla ilişkili değildir.</td>
+</tr>
+
+<tr>
+  <td><strong>Adınız</strong><br>(yalnız Apple ile Giriş yaparsanız)</td>
+  <td>Ortak koleksiyonlarda, birlikte liste düzenlediğiniz kişilerin sizi tanıması.</td>
+  <td>Sunucumuzda, yalnız o koleksiyonun üyelerine görünür.
+      <strong>E-posta adresiniz istenmez ve saklanmaz.</strong></td>
+</tr>
+
+<tr>
+  <td><strong>Ortak koleksiyona eklediğiniz mekanlar</strong></td>
+  <td>Koleksiyonu paylaştığınız kişilerin de görebilmesi.</td>
+  <td>Sunucumuzda. Ortak olmayan koleksiyonlarınız ve kişisel notlarınız gönderilmez.</td>
+</tr>
+
+<tr>
+  <td><strong>Anonim ziyaret sayacı</strong><br>mekan kimliği, kategori, şehir/ülke, zaman damgası</td>
+  <td>Keşfet sekmesindeki "topluluğun en çok gittikleri" listesi.</td>
+  <td>Sunucumuzda, toplu istatistik olarak. Adınız, notunuz ve konumunuz gönderilmez.
+      <strong>Profil'den kapatabilirsiniz.</strong></td>
+</tr>
+
+<tr>
+  <td><strong>Kullanım olayları</strong><br>hangi ekran açıldı, hangi özellik kullanıldı</td>
+  <td>Uygulamanın neresinin işe yaradığını anlamak.</td>
+  <td>Sunucumuzda. <strong>Profil'den kapatabilirsiniz.</strong></td>
+</tr>
+</table>
+
+<div class="card">
+<h3>Yapmadığımız şeyler</h3>
+<ul>
+  <li>Reklam göstermiyoruz ve reklam ağlarına veri satmıyoruz.</li>
+  <li>Sizi uygulamalar veya siteler arasında <strong>takip etmiyoruz</strong> (App Tracking Transparency
+      anlamında hiçbir takip yok).</li>
+  <li>Instagram veya TikTok hesabınıza bağlanmıyoruz; giriş bilgisi istemiyoruz.</li>
+  <li>E-posta adresinizi toplamıyoruz.</li>
+  <li>Kişi listenize, fotoğraflarınıza veya mikrofonunuza erişmiyoruz.</li>
+</ul>
+</div>
+
+<h2>Kullandığımız hizmetler</h2>
+<ul>
+  <li><strong>Google Places</strong> — mekan adı, adres, çalışma saatleri, puan ve fotoğraflar buradan gelir.</li>
+  <li><strong>Anthropic Claude</strong> — gönderi metninden mekanı çıkarmak için.</li>
+  <li><strong>Firebase (Google)</strong> — anonim kimlik ve ortak koleksiyonların saklanması.</li>
+  <li><strong>Cloudflare Workers</strong> — yukarıdaki servislere giden isteklerimizin geçtiği sunucu.</li>
+  <li><strong>Apple</strong> — abonelik satın alımları. Ödeme bilgilerinizi biz görmüyoruz.</li>
+  <li><strong>RevenueCat</strong> — abonelik durumunun yönetimi.</li>
+</ul>
+
+<h2>Saklama süresi</h2>
+<p>Mekan bilgileri (ad, adres, saat, fotoğraf) sunucumuzda önbelleklenir; bu veri size ait
+değil, mekana aittir ve aynı yeri kaydeden herkese hizmet eder. Anonim ziyaret sayaçları
+süresiz tutulur çünkü toplu istatistiktir. Ortak koleksiyon içeriğiniz siz silene kadar durur.
+Arama konumu ve gönderi metni hiç saklanmaz.</p>
+
+<h2>Haklarınız</h2>
+<ul>
+  <li><strong>Hesabınızı uygulama içinden silebilirsiniz:</strong> Profil → Paylaşım hesabı → Hesabı sil.
+      Bu, adınızı ve ortak koleksiyon katkılarınızı siler.</li>
+  <li><strong>İstatistik ve analitik toplanmasını kapatabilirsiniz:</strong> Profil → Gizlilik.
+      Kapatmak sonraki katkıları durdurur; geçmiş anonim sayaçlar toplu veri olduğu için geri alınmaz.</li>
+  <li>Cihazınızdaki kayıtlar için: uygulamayı silmek hepsini siler.</li>
+  <li>Verilerinize erişim, düzeltme veya silme talepleriniz için yukarıdaki adrese yazabilirsiniz.</li>
+</ul>
+
+<h2>Çocuklar</h2>
+<p>Aklımda 4 yaş ve üzeri için derecelendirilmiştir ve çocuklara yönelik değildir.
+Bilerek 13 yaş altından veri toplamıyoruz.</p>
+
+<h2>Değişiklikler</h2>
+<p>Bu politika değişirse bu sayfadaki tarih güncellenir. Önemli bir değişiklik olursa
+uygulama içinde bildiririz.</p>
+
+<footer>
+Aklımda · <a href="./destek.html">Destek</a> ·
+<a href="mailto:osmantarikurkac1@gmail.com">osmantarikurkac1@gmail.com</a>
+</footer>
+
+</main>
+</body>
+</html>
