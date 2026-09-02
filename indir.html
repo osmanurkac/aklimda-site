@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aklımda — Nereye gidileceğine birlikte karar verin</title>
+<meta name="description" content="Arkadaşlarınla ortak liste aç, anketle karar ver. Reels'te gördüğün mekan haritanda dursun.">
+<style>
+  :root{
+    --bg:#faf5ee; --bg2:#f0e7db; --fg:#241e19; --muted:#6b625a;
+    --nar:#f2543d; --line:#e7ddce; --card:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#191411; --bg2:#221b16; --fg:#f2e9dd; --muted:#a49a90;
+           --nar:#ff6e5c; --line:#3a322b; --card:#221b16; }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--fg);
+    font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:560px;margin:0 auto;padding:44px 22px 64px}
+
+  h1{
+    font-size:clamp(30px,8vw,40px); line-height:1.12; letter-spacing:-.02em;
+    margin:0 0 14px; text-wrap:balance;
+  }
+  h1 em{font-style:normal;color:var(--nar)}
+  .sub{color:var(--muted);margin:0 0 28px;font-size:17px}
+
+  .cta{
+    display:block; width:100%; text-align:center;
+    background:var(--nar); color:#fff; text-decoration:none;
+    font-size:19px; font-weight:700; letter-spacing:.01em;
+    padding:18px 22px; border-radius:14px;
+    box-shadow:0 6px 20px -6px rgba(242,84,61,.55);
+  }
+  .cta:active{transform:translateY(1px)}
+  .note{
+    text-align:center; color:var(--muted); font-size:14px; margin:12px 0 0;
+  }
+
+  .shot{
+    display:block; width:100%; max-width:340px; margin:36px auto 0;
+    border-radius:20px; border:1px solid var(--line);
+  }
+
+  .how{margin:44px 0 0;padding:0;list-style:none;display:grid;gap:18px}
+  .how li{display:grid;grid-template-columns:30px 1fr;gap:14px;align-items:start}
+  .how b{
+    display:grid;place-items:center;width:30px;height:30px;border-radius:50%;
+    background:var(--nar);color:#fff;font-size:14px;font-weight:700;
+  }
+  .how span{padding-top:3px}
+  .how span i{display:block;font-style:normal;color:var(--muted);font-size:15px;margin-top:2px}
+
+  footer{margin:52px 0 0;text-align:center;font-size:14px}
+  footer a{color:var(--muted);text-decoration:none;margin:0 9px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>"Sen seç."<br><em>"Yok, sen seç."</em></h1>
+  <p class="sub">Arkadaşlarınla ortak liste aç, anketle karar verin. Tartışma bitsin.</p>
+
+  <a class="cta" href="https://apps.apple.com/tr/app/id6796315160">App Store'dan indir</a>
+  <p class="note">iPhone · ücretsiz başla</p>
+
+  <img class="shot" src="./anket.jpg" alt="Aklımda uygulamasında ortak koleksiyon anketi: Cumartesi nereye gidelim?">
+
+  <ul class="how">
+    <li><b>1</b><span>Reel'i paylaş, Aklımda'yı seç<i>Mekan adı, fotoğrafı ve çalışma saatleri hazır gelir.</i></span></li>
+    <li><b>2</b><span>Ortak liste aç, kodu gönder<i>Arkadaşın koda girer, aynı listeyi ikiniz de düzenlersiniz.</i></span></li>
+    <li><b>3</b><span>Anketi aç, oylayın<i>Karar çıkar, yol tarifi tek dokunuş uzakta.</i></span></li>
+  </ul>
+
+  <footer>
+    <a href="./destek.html">Destek</a>·<a href="./gizlilik.html">Gizlilik</a>
+  </footer>
+
+</div>
+</body>
+</html>
