@@ -23,12 +23,17 @@
   }
   .wrap{max-width:560px;margin:0 auto;padding:44px 22px 64px}
 
+  .icon{
+    display:block; width:76px; height:76px; margin:0 auto 22px;
+    border-radius:22.5%; box-shadow:0 4px 14px -4px rgba(0,0,0,.3);
+  }
   h1{
+    text-align:center;
     font-size:clamp(30px,8vw,40px); line-height:1.12; letter-spacing:-.02em;
     margin:0 0 14px; text-wrap:balance;
   }
   h1 em{font-style:normal;color:var(--nar)}
-  .sub{color:var(--muted);margin:0 0 28px;font-size:17px}
+  .sub{color:var(--muted);margin:0 0 28px;font-size:17px;text-align:center}
 
   .cta{
     display:block; width:100%; text-align:center;
@@ -43,7 +48,7 @@
   }
 
   .shot{
-    display:block; width:100%; max-width:340px; margin:36px auto 0;
+    display:block; width:100%; max-width:400px; margin:36px auto 0;
     border-radius:20px; border:1px solid var(--line);
   }
 
@@ -63,13 +68,15 @@
 <body>
 <div class="wrap">
 
+  <img class="icon" src="./simge.png" alt="Aklımda uygulama simgesi">
+
   <h1>"Sen seç."<br><em>"Yok, sen seç."</em></h1>
   <p class="sub">Arkadaşlarınla ortak liste aç, anketle karar verin. Tartışma bitsin.</p>
 
   <a class="cta" href="https://apps.apple.com/tr/app/id6796315160">App Store'dan indir</a>
   <p class="note">iPhone · ücretsiz başla</p>
 
-  <img class="shot" src="./anket.jpg" alt="Aklımda uygulamasında ortak koleksiyon anketi: Cumartesi nereye gidelim?">
+  <img class="shot" src="./anket.png" alt="Aklımda uygulamasında ortak koleksiyon anketi: Cumartesi nereye gidelim?">
 
   <ul class="how">
     <li><b>1</b><span>Reel'i paylaş, Aklımda'yı seç<i>Mekan adı, fotoğrafı ve çalışma saatleri hazır gelir.</i></span></li>
