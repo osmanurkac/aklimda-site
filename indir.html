@@ -103,6 +103,15 @@
   .trust svg{width:14px;height:14px;fill:none;stroke:var(--nar);stroke-width:2.8;
              stroke-linecap:round;stroke-linejoin:round;flex:none}
 
+  .point{
+    display:block;margin:14px auto 8px;width:26px;height:26px;
+    fill:none;stroke:var(--nar);stroke-width:2.6;
+    stroke-linecap:round;stroke-linejoin:round;
+    animation:bob 1.7s ease-in-out infinite;
+  }
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+  @media (prefers-reduced-motion:reduce){ .point{animation:none} }
+
   hr{border:0;border-top:1px solid var(--line);margin:34px 0 0}
 
   /* ---------- Katlanın altı ---------- */
@@ -148,8 +157,10 @@
 
 <main class="wrap">
 
-  <h1>Kaydettiğin mekan<br><em>kaybolmasın.</em></h1>
-  <p class="sub">Reel'i paylaş tuşuyla gönder — adresi, saatleri ve puanı hazır gelsin.</p>
+  <h1>Tıkla,<br><em>App Store'dan indir.</em></h1>
+  <p class="sub">Aklımda — Instagram'da beğendiğin mekanı adresiyle, saatiyle kaydeder.</p>
+
+  <svg class="point" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
 
   <a class="listing" href="https://apps.apple.com/tr/app/id6796315160">
     <img src="./simge.png" width="62" height="62" alt="">
