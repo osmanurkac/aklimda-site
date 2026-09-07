@@ -239,11 +239,17 @@
     function track(event) {
       try {
         var body = JSON.stringify({ e: event, r: ref });
-        if (navigator.sendBeacon) {
-          navigator.sendBeacon(API, new Blob([body], { type: 'application/json' }));
-        } else {
+        // **`text/plain` — `application/json` DEĞİL.**
+        //
+        // JSON "basit içerik türü" sayılmıyor: tarayıcı önce OPTIONS ile
+        // ön-uçuş yapmak istiyor, `sendBeacon` ise ön-uçuş yapamıyor. İstek
+        // sessizce düşüyor ve konsolda bile görünmüyor. `text/plain` güvenli
+        // listede olduğu için beacon doğrudan gidiyor. Sunucu gövdeyi metin
+        // olarak alıp JSON'a çeviriyor.
+        var blob = new Blob([body], { type: 'text/plain;charset=UTF-8' });
+        if (!navigator.sendBeacon || !navigator.sendBeacon(API, blob)) {
           fetch(API, { method: 'POST', body: body, keepalive: true,
-                       headers: { 'Content-Type': 'application/json' } });
+                       headers: { 'Content-Type': 'text/plain' } });
         }
       } catch (e) { /* ölçüm hiçbir zaman sayfayı bozmamalı */ }
     }
