@@ -216,6 +216,48 @@
 </div>
 
 <script>
+  // ── Ölçüm ───────────────────────────────────────────────────────────
+  //
+  // Meta "42 tıklama, 0 kurulum" diyor ama arada ölçmediğimiz bir adım var:
+  // sayfayı görenlerin kaçı App Store düğmesine bastı. O sayı olmadan iki
+  // farklı hikâye aynı veriye uyuyor — sayfa mı ikna edemiyor, App Store
+  // sayfası mı. İkisinin çözümü tamamen farklı.
+  //
+  // **Düğmenin `href`ine DOKUNULMUYOR.** Sayaç üzerinden yönlendirmek
+  // (`/go/appstore` gibi) daha kesin ölçerdi ama Worker'ın bir anlık
+  // kesintisi indirme düğmesini kırardı. Ölçüm uğruna dönüşümü riske
+  // atmak, ölçmemekten kötü.
+  //
+  // `sendBeacon` sayfadan ayrılırken bile gidiyor — normal `fetch` sayfa
+  // kapanırken iptal olurdu. Engellenirse yalnız sayı eksik kalıyor,
+  // bağlantı çalışmaya devam ediyor.
+  (function () {
+    var API = 'https://aklimda-places-api.osmantarikurkac1.workers.dev/t';
+    // Kaynak etiketi: reklam linkine ?r=meta eklenirse ayrıştırılabiliyor.
+    var ref = (new URLSearchParams(location.search).get('r') || 'direct');
+
+    function track(event) {
+      try {
+        var body = JSON.stringify({ e: event, r: ref });
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon(API, new Blob([body], { type: 'application/json' }));
+        } else {
+          fetch(API, { method: 'POST', body: body, keepalive: true,
+                       headers: { 'Content-Type': 'application/json' } });
+        }
+      } catch (e) { /* ölçüm hiçbir zaman sayfayı bozmamalı */ }
+    }
+
+    // ?go ile gelen ziyaretçi App Store'a yönlendiriliyor; onu da tıklama
+    // sayıyoruz, yoksa o yoldan gelenler hunide görünmez olurdu.
+    if (/[?&]go(=|&|$)/.test(location.search)) { track('appstore_click'); }
+    else { track('view'); }
+
+    document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (a) {
+      a.addEventListener('click', function () { track('appstore_click'); });
+    });
+  })();
+
   // ?go ile gelen ziyaretçi reklamdan geliyor: sayfayı OKUMAYA değil,
   // uygulamayı ALMAYA geldi. Ona bir web sayfası gösterip düğme aratmak
   // aradaki en pahalı adım — doğrudan App Store'a bırakıyoruz.
