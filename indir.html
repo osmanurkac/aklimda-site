@@ -233,8 +233,24 @@
   // bağlantı çalışmaya devam ediyor.
   (function () {
     var API = 'https://aklimda-places-api.osmantarikurkac1.workers.dev/t';
-    // Kaynak etiketi: reklam linkine ?r=meta eklenirse ayrıştırılabiliyor.
-    var ref = (new URLSearchParams(location.search).get('r') || 'direct');
+    // Kaynak etiketi — **reklam linkine hiçbir şey eklemeden.**
+    //
+    // Çalışan bir reklamın URL'ini değiştirmek öğrenme evresini sıfırlıyor
+    // ve yeniden incelemeye sokuyor; maliyeti düşürdüğümüz bir kampanyada
+    // bu ölçüm uğruna alınacak risk değil. Neyse ki gerek de yok:
+    // Instagram ve Facebook kendi içindeki tarayıcıyı User-Agent'ta ilan
+    // ediyor, tarayıcıda açılan tıklamalar da `fbclid` taşıyor.
+    var ref = (function () {
+      var q = new URLSearchParams(location.search);
+      var tag = q.get('r');
+      if (tag) return tag;                                  // elle etiket verilmişse üstün
+      var ua = navigator.userAgent || '';
+      if (/Instagram/i.test(ua)) return 'instagram';
+      if (/FBAN|FBAV|FB_IAB/i.test(ua)) return 'facebook';
+      if (q.has('fbclid')) return 'meta';
+      if (document.referrer) return 'web';
+      return 'direct';
+    })();
 
     function track(event) {
       try {
