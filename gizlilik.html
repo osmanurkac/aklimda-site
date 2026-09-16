@@ -12,17 +12,18 @@
   * { box-sizing: border-box; }
   body { margin:0; padding:0; background:var(--bg); color:var(--fg);
          font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
-  main { max-width: 720px; margin: 0 auto; padding: 40px 22px 80px; }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 22px 80px; }
   h1 { font-size: 30px; line-height:1.2; margin: 0 0 6px; }
-  h2 { font-size: 20px; margin: 38px 0 10px; }
+  h2 { font-size: 20px; margin: 40px 0 10px; }
   h3 { font-size: 16px; margin: 24px 0 6px; }
-  .sub { color: var(--muted); margin: 0 0 32px; }
-  table { width:100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  .sub { color: var(--muted); margin: 0 0 28px; }
+  .table-wrap { overflow-x: auto; margin: 14px 0; }
+  table { width:100%; border-collapse: collapse; font-size: 15px; min-width: 560px; }
   th, td { text-align:left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
   th { font-weight: 600; }
-  .card { background: var(--card); border:1px solid var(--line); border-radius: 14px; padding: 16px 18px; margin: 18px 0; }
+  .card { background: var(--card); border:1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin: 18px 0; }
+  .card ul { margin: 8px 0 0; padding-left: 20px; }
   a { color: var(--nar); }
-  code { background: var(--card); border:1px solid var(--line); border-radius:5px; padding:1px 5px; font-size:.9em; }
   footer { margin-top: 48px; padding-top: 18px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
 </style>
 </head>
@@ -30,121 +31,177 @@
 <main>
 
 <h1>Gizlilik Politikası</h1>
-<p class="sub">Aklımda · Son güncelleme: 29 Ağustos 2026</p>
+<p class="sub">Aklımda · Son güncelleme: 16 Eylül 2026</p>
 
-<p>Aklımda, Instagram ve TikTok'ta gördüğünüz mekanları kendi haritanıza kaydetmenizi
-sağlayan bir iPhone uygulamasıdır. Bu sayfa, uygulamanın hangi veriyi neden işlediğini
-sade bir dille anlatır. Kısa özet: <strong>kaydettiğiniz mekanlar sizin cihazınızda durur.</strong>
-Sunucuya giden şeyler aşağıda tek tek yazılıdır ve her birinin bir sebebi vardır.</p>
+<p>Aklımda, Instagram ve TikTok'ta gördüğün mekanları kendi haritana kaydetmeni, arkadaşlarının
+nereye gittiğini görmeni ve şehrinde topluluğun en çok gittiği yerleri keşfetmeni sağlayan bir
+iPhone ve iPad uygulamasıdır. Bu sayfa, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK)
+kapsamında hangi verini neden işlediğimizi, kimlerle paylaştığımızı ve haklarını anlatır.</p>
+
+<div class="card">
+<h3 style="margin-top:0">Kısaca</h3>
+<ul>
+  <li><strong>Kaydettiğin mekanlar ve notların cihazında durur.</strong> Yalnızca ortak koleksiyona eklediklerin sunucuya gider.</li>
+  <li>Uygulamayı <strong>hesap açmadan</strong> kullanabilirsin. Profil, takip, değerlendirme ve mesaj için Apple ile giriş gerekir; e-posta adresin istenmez.</li>
+  <li>Profilin, değerlendirmelerin ve takip ilişkilerin diğer kullanıcılara görünür. Gittiğin yerler profilinde yalnızca sen “Görünür ol” dersen görünür.</li>
+  <li>Keşfet'te mekanların ücretli yerleşimleri <strong>“Sponsorlu”</strong> etiketiyle gösterilir. Kişisel verini <strong>satmıyoruz</strong>; mekanlara yalnızca toplu sayılar raporlanır.</li>
+  <li>Reklam kimliğine (IDFA) yalnızca sen izin verirsen erişilir. Kullanım verisi toplanmasını, topluluk istatistiklerini ve kampanya bildirimlerini Ayarlar'dan kapatabilirsin.</li>
+</ul>
+</div>
 
 <h2>Veri sorumlusu</h2>
 <p>Osman Tarık Urkaç · <a href="mailto:aklimdaapp@gmail.com">aklimdaapp@gmail.com</a></p>
 
-<h2>İşlenen veriler</h2>
+<h2>İşlediğimiz veriler ve amaçları</h2>
 
+<div class="table-wrap">
 <table>
-<tr><th>Veri</th><th>Neden</th><th>Nerede durur</th></tr>
+<tr><th>Veri</th><th>Neden</th><th>Nerede ve kimler görür</th></tr>
 
 <tr>
-  <td><strong>Kaydettiğiniz mekanlar</strong><br>ad, adres, koordinat, kategori, notunuz</td>
-  <td>Uygulamanın kendisi — haritanız ve listeniz.</td>
-  <td><strong>Cihazınızda.</strong> iCloud yedeğiniz açıksa Apple'ın yedeğine dahil olur. Bize gönderilmez.</td>
+  <td><strong>Kaydettiğin mekanlar</strong><br>ad, adres, koordinat, kategori, notun, “gittim” işaretin, koleksiyonların</td>
+  <td>Haritan, listen, sıralamaların ve yıl özetin.</td>
+  <td><strong>Cihazında</strong> (iCloud yedeğin açıksa Apple'ın yedeğinde). Sunucuya gönderilmez; ortak koleksiyon istisnası aşağıda.</td>
 </tr>
 
 <tr>
-  <td><strong>Konumunuz</strong></td>
-  <td>Haritada yakınınızdaki kayıtları göstermek, mesafe hesaplamak, "şu an açık" süzgeci ve
-      yakında bildirimi.</td>
-  <td>Cihazınızda hesaplanır. <strong>Tek istisna:</strong> mekan <em>ararken</em> yakındaki
-      sonuçları getirebilmek için yaklaşık konumunuz arama sunucumuza iletilir. Orada
-      <strong>saklanmaz</strong>, yalnız o aramayı yönlendirmek için kullanılır.</td>
+  <td><strong>Kimlik bilgileri</strong><br>otomatik oluşturulan anonim kullanıcı kimliği; Apple ile giriş yaparsan Apple'ın verdiği kullanıcı kimliği ve (ilk girişte paylaşırsan) adın</td>
+  <td>Sunucumuza güvenli istek atmak, kötüye kullanımı sınırlamak, hesabını ve sosyal özellikleri çalıştırmak.</td>
+  <td>Firebase Authentication (Google). E-posta adresin istenmez.</td>
 </tr>
 
 <tr>
-  <td><strong>Paylaştığınız gönderi bağlantısı ve metni</strong></td>
-  <td>Gönderideki mekanı bulmak. Metin bir yapay zekâ modeline (Anthropic Claude) gönderilir.</td>
-  <td>Sunucumuzdan geçer, <strong>saklanmaz</strong>. Profiliniz, takipçileriniz veya gönderi
-      geçmişiniz hiçbir zaman okunmaz.</td>
+  <td><strong>Profil</strong><br>kullanıcı adı, görünen ad, biyografi, profil fotoğrafı, gittiğin mekan sayısı, aramada görünme tercihin</td>
+  <td>Arkadaşlarının seni bulması ve takip edebilmesi.</td>
+  <td>Diğer kullanıcılara görünür. Profil fotoğrafın yüklenirken uygunsuz içerik denetiminden (Google Cloud Vision) geçer ve Cloudflare'de saklanır.</td>
 </tr>
 
 <tr>
-  <td><strong>Anonim kullanıcı kimliği</strong><br>(Firebase Anonymous)</td>
-  <td>Ücretsiz katmandaki 10 mekanlık hakkın ve Premium kotalarının sayılması.</td>
-  <td>Sunucumuzda. Adınızla, e-postanızla veya telefonunuzla ilişkili değildir.</td>
+  <td><strong>Sosyal etkileşimler</strong><br>takip ettiklerin ve takipçilerin, engellediklerin, değerlendirmelerin (yıldız ve yorum), görünür ziyaretlerin</td>
+  <td>Arkadaş akışı, mekan sayfalarındaki değerlendirmeler ve “buraya gidenler”.</td>
+  <td>Takip ilişkileri ve değerlendirmeler herkese açıktır. Görünür ziyaretler yalnızca “Görünür ol” dersen, yalnızca kendisi de görünür olan kullanıcılara gösterilir. Engel listen yalnızca sana görünür.</td>
 </tr>
 
 <tr>
-  <td><strong>Adınız</strong><br>(yalnız Apple ile Giriş yaparsanız)</td>
-  <td>Ortak koleksiyonlarda, birlikte liste düzenlediğiniz kişilerin sizi tanıması.</td>
-  <td>Sunucumuzda, yalnız o koleksiyonun üyelerine görünür.
-      <strong>E-posta adresiniz istenmez ve saklanmaz.</strong></td>
+  <td><strong>Mesajlar</strong><br>mesaj metni, gönderilme ve görülme zamanı</td>
+  <td>Karşılıklı takipleştiğin kişilerle yazışman.</td>
+  <td>Yalnızca yazıştığın kişi ve sen. Kendi gönderdiğin bir mesajı iki taraftan da silebilirsin. Sohbeti listenden kaldırabilirsin ancak taciz şikâyetlerinin incelenebilmesi için sohbet kaydı sunucuda kalır.</td>
 </tr>
 
 <tr>
-  <td><strong>Ortak koleksiyona eklediğiniz mekanlar</strong></td>
-  <td>Koleksiyonu paylaştığınız kişilerin de görebilmesi.</td>
-  <td>Sunucumuzda. O koleksiyona eklediğiniz mekanın <strong>notu da gider</strong> — not oraya grubun görmesi için yazılıyor. Ortak <em>olmayan</em> koleksiyonlarınız ve onlardaki notlarınız gönderilmez.</td>
+  <td><strong>Ortak koleksiyonlar</strong><br>koleksiyona eklediğin mekanlar ve onlara yazdığın notlar, görünen adın, anket oyların</td>
+  <td>Koleksiyonu paylaştığın kişilerle birlikte düzenlemek.</td>
+  <td>Yalnızca o koleksiyonun üyeleri. Ortak olmayan koleksiyonların sunucuya gitmez.</td>
 </tr>
 
 <tr>
-  <td><strong>Anonim ziyaret sayacı</strong><br>mekan kimliği, kategori, şehir/ülke, zaman damgası</td>
-  <td>Keşfet sekmesindeki "topluluğun en çok gittikleri" listesi.</td>
-  <td>Sunucumuzda, toplu istatistik olarak. Adınız, notunuz ve konumunuz gönderilmez.
-      <strong>Profil'den kapatabilirsiniz.</strong></td>
+  <td><strong>Konum</strong></td>
+  <td>Haritada yakınındaki mekanları göstermek, mesafe, “şu an açık” süzgeci, yakında bildirimi; mekan ararken yakındaki sonuçları bulmak; Keşfet listesinin ve sponsorlu yerleşimlerin ilçe ve şehrine göre seçilmesi.</td>
+  <td>Konumun cihazında kullanılır. Mekan ararken konumun (yaklaşık 100 metre hassasiyetle) arama sunucumuza iletilir ve saklanmaz. Keşfet ve sponsorlu yerleşimler için yalnızca <strong>ilçe ve şehir</strong> düzeyi kullanılır. Yakında bildirimi için arka plan konumun cihazdan çıkmaz.</td>
 </tr>
 
 <tr>
-  <td><strong>Kullanım olayları</strong><br>hangi ekran açıldı, hangi özellik kullanıldı</td>
-  <td>Uygulamanın neresinin işe yaradığını anlamak.</td>
-  <td>Sunucumuzda. <strong>Profil'den kapatabilirsiniz.</strong></td>
+  <td><strong>Paylaştığın gönderi bağlantısı ve metni</strong></td>
+  <td>Gönderideki mekanı bulmak.</td>
+  <td>Sunucumuzdan geçer ve bir yapay zekâ modeline (Anthropic Claude) gönderilir; saklanmaz. Instagram ya da TikTok hesabına erişilmez.</td>
+</tr>
+
+<tr>
+  <td><strong>Topluluk ziyaret sayacı</strong><br>“gittim” dediğin mekanın kimliği, kategorisi, şehri, ilçesi, ülkesi ve zamanı</td>
+  <td>Keşfet'teki “topluluğun en çok gittiği yerler” listesi.</td>
+  <td>Kullanıcı kimliğine bağlı bir kayıt olarak tutulur, başkalarına gösterilmez; Keşfet'te yalnızca toplu sayılar görünür. Adın, notun ve konumun gönderilmez. Ayarlar'dan kapatabilirsin.</td>
+</tr>
+
+<tr>
+  <td><strong>Bildirimler</strong><br>cihazının bildirim jetonu; kampanya bildirimlerine izin verdiysen ilçe ve şehir bilgisi</td>
+  <td>Yeni mesaj ve takipçi bildirimleri; izin verdiysen yakınındaki anlaşmalı mekanların kampanyaları.</td>
+  <td>Cloudflare'de, kullanıcı kimliğinle birlikte. 90 gün kullanılmayan jeton silinir. Kampanya bildirimlerini Ayarlar'dan kapattığında hedefleme bilgin silinir.</td>
+</tr>
+
+<tr>
+  <td><strong>Kupon ve sponsorlu yerleşim olayları</strong><br>kupon alma ve kullanma, sponsorlu kartın gösterilmesi ve dokunulması</td>
+  <td>Anlaşmalı mekanlara kampanya sonuçlarını raporlamak.</td>
+  <td>Kullanıcı kimliğinin tek yönlü özetiyle (hash) ve ilçe bilgisiyle kaydedilir. Mekanlara <strong>yalnızca toplu sayılar</strong> raporlanır; adın ya da profilin paylaşılmaz.</td>
+</tr>
+
+<tr>
+  <td><strong>Kullanım verisi</strong><br>hangi ekranın açıldığı, hangi özelliğin kullanıldığı, uygulama sürümü, cihaz türü</td>
+  <td>Uygulamanın neresinin işe yaradığını anlamak ve hataları bulmak.</td>
+  <td>Google Analytics for Firebase ve kendi sunucumuz (kullanıcı kimliğinin özetiyle). Ayarlar → “Kullanım verisi” ile kapatabilirsin.</td>
+</tr>
+
+<tr>
+  <td><strong>Reklam ölçümü</strong><br>uygulamanın yüklenmesi ve açılması, ilk kayıt ve mekan kaydetme gibi olaylar; izin verirsen reklam kimliği (IDFA)</td>
+  <td>Aklımda'nın reklamlarının kaç kurulum getirdiğini ölçmek.</td>
+  <td>Meta Platforms (Facebook SDK). Reklam kimliği yalnızca izleme iznine “İzin Ver” dersen paylaşılır; izin vermezsen ölçüm Apple'ın SKAdNetwork'ü üzerinden toplu olarak yapılır.</td>
+</tr>
+
+<tr>
+  <td><strong>Şikâyetler</strong><br>şikâyet eden, şikâyet edilen kullanıcı ya da içerik, şikâyet türü ve notun</td>
+  <td>Topluluk kurallarını uygulamak.</td>
+  <td>Yalnızca inceleme için kullanılır; şikâyet ettiğin kişiye kim olduğun gösterilmez.</td>
+</tr>
+
+<tr>
+  <td><strong>Teknik kayıtlar</strong><br>istek zamanı, çağrılan işlem, hata bilgisi, kullanıcı kimliğinin özeti</td>
+  <td>Güvenlik, kötüye kullanımın önlenmesi ve maliyet kontrolü.</td>
+  <td>Cloudflare'de kısa süreli.</td>
 </tr>
 </table>
-
-<div class="card">
-<h3>Yapmadığımız şeyler</h3>
-<ul>
-  <li>Reklam göstermiyoruz ve reklam ağlarına veri satmıyoruz.</li>
-  <li>Sizi uygulamalar veya siteler arasında <strong>takip etmiyoruz</strong> (App Tracking Transparency
-      anlamında hiçbir takip yok).</li>
-  <li>Instagram veya TikTok hesabınıza bağlanmıyoruz; giriş bilgisi istemiyoruz.</li>
-  <li>E-posta adresinizi toplamıyoruz.</li>
-  <li>Kişi listenize, fotoğraflarınıza veya mikrofonunuza erişmiyoruz.</li>
-</ul>
 </div>
 
-<h2>Kullandığımız hizmetler</h2>
+<h2>Hukuki sebepler</h2>
 <ul>
-  <li><strong>Google Places</strong> — mekan adı, adres, çalışma saatleri, puan ve fotoğraflar buradan gelir.</li>
-  <li><strong>Anthropic Claude</strong> — gönderi metninden mekanı çıkarmak için.</li>
-  <li><strong>Firebase (Google)</strong> — anonim kimlik ve ortak koleksiyonların saklanması.</li>
-  <li><strong>Cloudflare Workers</strong> — yukarıdaki servislere giden isteklerimizin geçtiği sunucu.</li>
-  <li><strong>Apple</strong> — abonelik satın alımları. Ödeme bilgilerinizi biz görmüyoruz.</li>
-  <li><strong>RevenueCat</strong> — abonelik durumunun yönetimi.</li>
+  <li><strong>Sözleşmenin ifası</strong> (KVKK m.5/2-c): kaydetme, arama, hesap, profil, takip, değerlendirme, mesajlaşma, ortak koleksiyon ve bildirimler — kullanmayı seçtiğin özelliklerin çalışması.</li>
+  <li><strong>Meşru menfaat</strong> (m.5/2-f): güvenlik ve teknik kayıtlar, kötüye kullanımın önlenmesi, şikâyetlerin incelenmesi, toplu topluluk istatistikleri, kullanım verisi ve reklam ölçümü. İlgili ayarları kapatarak itiraz edebilirsin.</li>
+  <li><strong>Açık rıza</strong> (m.5/1): kampanya bildirimleri, reklam kimliğine erişim (izleme izni) ve ziyaretlerinin profilinde görünmesi (“Görünür ol”). Rızanı Ayarlar'dan ya da iOS ayarlarından istediğin an geri alabilirsin.</li>
 </ul>
 
-<h2>Saklama süresi</h2>
-<p>Mekan bilgileri (ad, adres, saat, fotoğraf) sunucumuzda önbelleklenir; bu veri size ait
-değil, mekana aittir ve aynı yeri kaydeden herkese hizmet eder. Anonim ziyaret sayaçları
-süresiz tutulur çünkü toplu istatistiktir. Ortak koleksiyon içeriğiniz siz silene kadar durur.
-Arama konumu ve gönderi metni hiç saklanmaz.</p>
+<h2>Hizmet sağlayıcılar ve yurt dışına aktarım</h2>
+<p>Verilerini yalnızca uygulamayı çalıştırmak için kullandığımız hizmet sağlayıcılarla, yukarıdaki amaçlarla sınırlı olarak paylaşırız:</p>
+<ul>
+  <li><strong>Google</strong> — Firebase (kimlik doğrulama, veritabanı, uzaktan yapılandırma, analitik), Google Maps Platform (mekan adı, adres, çalışma saatleri, puan ve fotoğraflar), Google Cloud Vision (profil fotoğrafı denetimi).</li>
+  <li><strong>Cloudflare</strong> — sunucu, önbellek, bildirim jetonları ve profil fotoğraflarının depolanması.</li>
+  <li><strong>Anthropic</strong> — gönderi metninden mekanın çıkarılması.</li>
+  <li><strong>Meta Platforms</strong> — reklam ölçümü.</li>
+  <li><strong>Apple</strong> — Apple ile giriş ve bildirimlerin iletilmesi.</li>
+</ul>
+<p>Bu hizmet sağlayıcıların sunucuları Türkiye dışında (başta ABD ve Avrupa Birliği) bulunduğundan verilerin yurt dışına aktarılır. Aktarımlar yalnızca bu sayfadaki amaçlarla ve KVKK'nın 9. maddesine uygun olarak yapılır. Kişisel verini hiçbir üçüncü tarafa satmayız ya da kiralamayız.</p>
+
+<h2>Saklama süreleri</h2>
+<ul>
+  <li><strong>Cihazındaki kayıtlar:</strong> sen silene ya da uygulamayı silene kadar.</li>
+  <li><strong>Hesap ve profil verileri:</strong> hesabını silene kadar. Hesabını sildiğinde profilin, kullanıcı adın, takip ilişkilerin, değerlendirmelerin, görünür ziyaretlerin ve profil fotoğrafın silinir; Apple ile giriş bağlantın iptal edilir.</li>
+  <li><strong>Mesajlar:</strong> taciz şikâyetlerinin incelenebilmesi için sunucuda kalır; hesabın silindiğinde karşı tarafın gelen kutusunda gizlenir.</li>
+  <li><strong>Ortak koleksiyon içeriği:</strong> koleksiyon kapatılana ya da içerik silinene kadar.</li>
+  <li><strong>Topluluk ziyaret kayıtları:</strong> toplu istatistik olarak saklanır.</li>
+  <li><strong>Bildirim jetonu:</strong> 90 gün kullanılmazsa silinir.</li>
+  <li><strong>Kullanım verisi:</strong> Google Analytics'te en fazla 14 ay.</li>
+  <li><strong>Şikâyet kayıtları:</strong> inceleme ve topluluk kurallarının uygulanması için gerektiği süre.</li>
+  <li><strong>Gönderi metni ve arama konumu:</strong> saklanmaz.</li>
+</ul>
 
 <h2>Haklarınız</h2>
+<p>KVKK'nın 11. maddesi uyarınca verilerinin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini ya da silinmesini isteme, yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme, otomatik işleme sonucu aleyhine bir sonuca itiraz etme ve zarara uğradıysan giderilmesini talep etme hakların vardır.</p>
 <ul>
-  <li><strong>Hesabınızı uygulama içinden silebilirsiniz:</strong> Profil → Paylaşım hesabı → Hesabı sil.
-      Bu, adınızı ve ortak koleksiyon katkılarınızı siler.</li>
-  <li><strong>İstatistik ve analitik toplanmasını kapatabilirsiniz:</strong> Profil → Gizlilik.
-      Kapatmak sonraki katkıları durdurur; geçmiş anonim sayaçlar toplu veri olduğu için geri alınmaz.</li>
-  <li>Cihazınızdaki kayıtlar için: uygulamayı silmek hepsini siler.</li>
-  <li>Verilerinize erişim, düzeltme veya silme talepleriniz için yukarıdaki adrese yazabilirsiniz.</li>
+  <li><strong>Hesabını uygulama içinden silebilirsin:</strong> Profil → Ayarlar → Paylaşım hesabı → Hesabı sil.</li>
+  <li><strong>Ayarlar'dan kapatabileceklerin:</strong> kullanım verisi, topluluk istatistikleri, kampanya bildirimleri, aramada görünme ve ziyaretlerinin profilinde görünmesi.</li>
+  <li><strong>İzleme izni:</strong> iPhone Ayarlar → Gizlilik ve Güvenlik → İzleme.</li>
+  <li><strong>Cihazındaki kayıtlar:</strong> uygulamayı silmek hepsini siler.</li>
+  <li>Diğer talepler için <a href="mailto:aklimdaapp@gmail.com">aklimdaapp@gmail.com</a> adresine yazabilirsin; en geç 30 gün içinde yanıtlarız.</li>
 </ul>
 
+<h2>Topluluk güvenliği</h2>
+<p>Uygunsuz içerik ve kullanıcıları uygulama içinden şikâyet edebilir ve engelleyebilirsin. Şikâyetleri 24 saat içinde inceler, <a href="./destek.html#kurallar">topluluk kurallarını</a> çiğneyen içeriği kaldırır ve ilgili hesabı kapatırız. Kullanıcı adı, biyografi, değerlendirme ve mesajlar gönderilmeden önce uygunsuz ifade denetiminden geçer.</p>
+
 <h2>Çocuklar</h2>
-<p>Aklımda 4 yaş ve üzeri için derecelendirilmiştir ve çocuklara yönelik değildir.
-Bilerek 13 yaş altından veri toplamıyoruz.</p>
+<p>Aklımda 13 yaşından küçükler için tasarlanmamıştır. 13 yaşından küçük olduğunu bildiğimiz bir kullanıcıdan bilerek veri toplamayız; böyle bir durumu fark edersek hesabı ve verileri sileriz.</p>
+
+<h2>Güvenlik</h2>
+<p>Uygulama ile sunucularımız arasındaki tüm iletişim şifrelidir (HTTPS). Veritabanına erişim, her kullanıcının yalnızca kendi verisini değiştirebildiği güvenlik kurallarıyla sınırlıdır. Sunucu kayıtlarında kullanıcı kimliğin açık hâliyle değil, tek yönlü özetiyle tutulur.</p>
 
 <h2>Değişiklikler</h2>
-<p>Bu politika değişirse bu sayfadaki tarih güncellenir. Önemli bir değişiklik olursa
-uygulama içinde bildiririz.</p>
+<p>Bu politika değişirse bu sayfadaki tarih güncellenir. Önemli bir değişiklik olursa uygulama içinde bildiririz.</p>
 
 <footer>
 Aklımda · <a href="./destek.html">Destek</a> ·
