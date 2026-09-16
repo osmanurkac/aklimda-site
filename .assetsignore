@@ -1,0 +1,7 @@
+# wrangler.jsonc klasörün TAMAMINI yüklüyor ("directory": ".").
+# Bunlar olmadan .git herkese açık servis ediliyordu: /.git/config 200 dönüyor,
+# yani deponun geçmişi adresten indirilebiliyordu.
+.git
+.wrangler
+.assetsignore
+README.md
