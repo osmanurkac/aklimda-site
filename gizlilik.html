@@ -31,7 +31,7 @@
 <main>
 
 <h1>Gizlilik Politikası</h1>
-<p class="sub">Aklımda · Son güncelleme: 16 Eylül 2026</p>
+<p class="sub">Aklımda · Son güncelleme: 7 Ekim 2026</p>
 
 <p>Aklımda, Instagram ve TikTok'ta gördüğün mekanları kendi haritana kaydetmeni, arkadaşlarının
 nereye gittiğini görmeni ve şehrinde topluluğun en çok gittiği yerleri keşfetmeni sağlayan bir
@@ -41,7 +41,7 @@ kapsamında hangi verini neden işlediğimizi, kimlerle paylaştığımızı ve 
 <div class="card">
 <h3 style="margin-top:0">Kısaca</h3>
 <ul>
-  <li><strong>Kaydettiğin mekanlar ve notların cihazında durur.</strong> Yalnızca ortak koleksiyona eklediklerin sunucuya gider.</li>
+  <li><strong>Kaydettiğin mekanlar cihazında durur.</strong> Apple ile giriş yaparsan listen ayrıca hesabına yedeklenir — bu yedeği yalnızca sen görürsün. Ortak koleksiyona eklediklerini koleksiyonun üyeleri görür.</li>
   <li>Uygulamayı <strong>hesap açmadan</strong> kullanabilirsin. Profil, takip, değerlendirme ve mesaj için Apple ile giriş gerekir; e-posta adresin istenmez.</li>
   <li>Profilin, değerlendirmelerin ve takip ilişkilerin diğer kullanıcılara görünür. Gittiğin yerler profilinde yalnızca sen “Görünür ol” dersen görünür.</li>
   <li>Keşfet'te mekanların ücretli yerleşimleri <strong>“Sponsorlu”</strong> etiketiyle gösterilir. Kişisel verini <strong>satmıyoruz</strong>; mekanlara yalnızca toplu sayılar raporlanır.</li>
@@ -61,7 +61,7 @@ kapsamında hangi verini neden işlediğimizi, kimlerle paylaştığımızı ve 
 <tr>
   <td><strong>Kaydettiğin mekanlar</strong><br>ad, adres, koordinat, kategori, notun, “gittim” işaretin, koleksiyonların</td>
   <td>Haritan, listen, sıralamaların ve yıl özetin.</td>
-  <td><strong>Cihazında</strong> (iCloud yedeğin açıksa Apple'ın yedeğinde). Sunucuya gönderilmez; ortak koleksiyon istisnası aşağıda.</td>
+  <td><strong>Cihazında</strong> (iCloud yedeğin açıksa Apple'ın yedeğinde). <strong>Apple ile giriş yaptıysan</strong> listen hesabına bağlı olarak sunucumuzda da yedeklenir (Google Firestore): mekanlar, notların, &#8220;gittim&#8221; ve favori işaretlerin, koleksiyon üyelikleri. <strong>Bu yedeği senden başka kimse görmez</strong>; uygulamayı silip yeniden kurduğunda listen geri gelsin diye tutulur. Giriş yapmazsan sunucuya hiçbir şey gitmez. Ortak koleksiyona eklediklerini ayrıca koleksiyonun üyeleri görür.</td>
 </tr>
 
 <tr>
@@ -171,6 +171,7 @@ kapsamında hangi verini neden işlediğimizi, kimlerle paylaştığımızı ve 
 <h2>Saklama süreleri</h2>
 <ul>
   <li><strong>Cihazındaki kayıtlar:</strong> sen silene ya da uygulamayı silene kadar.</li>
+  <li><strong>Mekan yedeğin:</strong> hesabını silene kadar. Hesabını sildiğinde sunucudaki yedek de silinir. Bir mekanı listenden kaldırdığında yedekten de kaldırılır.</li>
   <li><strong>Hesap ve profil verileri:</strong> hesabını silene kadar. Hesabını sildiğinde profilin, kullanıcı adın, takip ilişkilerin, değerlendirmelerin, görünür ziyaretlerin ve profil fotoğrafın silinir; Apple ile giriş bağlantın iptal edilir.</li>
   <li><strong>Mesajlar:</strong> taciz şikâyetlerinin incelenebilmesi için sunucuda kalır; hesabın silindiğinde karşı tarafın gelen kutusunda gizlenir.</li>
   <li><strong>Ortak koleksiyon içeriği:</strong> koleksiyon kapatılana ya da içerik silinene kadar.</li>
